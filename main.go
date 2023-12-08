@@ -13,7 +13,7 @@ import (
 var tmpl string
 
 func main() {
-	walk("./reading")
+	walk("./books")
 
 	tmpl, err := template.New("index.html").Parse(tmpl)
 	if err != nil {
