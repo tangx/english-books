@@ -5,18 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Books</title>
+
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/css/book.css">
 </head>
 
 <body>
 
-  <h1>English Books</h1>
+  <div class="container">
+    <div class="title">
+      <h1>English Books</h1>
+    </div>
 
-  {{range $idx, $book := . }}
-  <a href="{{ $book.Path }}" download="{{ $book.Name }}">{{ $idx }}.
-    {{ $book.Name }}
-  </a>
-  <hr>
-  {{ end}}
+
+    {{range $idx, $book := . }}
+
+    <!-- book -->
+    <a href="{{ $book.Path }}" download="{{ $book.Name }}" alt="">
+      <div class="book">
+        <img src="{{ $book.Path }}.jpg">
+        {{$idx }} - {{ $book.Name }}
+      </div>
+
+    </a>
+    {{ end}}
+
+  </div>
+
 
 </body>
 
