@@ -7,23 +7,33 @@
 }
 
 .book {
-    width: 180px;
-    height: 220px;
+    width: 200px;
+    height: 260px;
     margin: 10px;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
     overflow: scroll;
     flex-direction: column; 
     float: left;
 }
 
-.book img {
+.book .image {
+    width: 160px;
+    height: 75%;
+    margin: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+img{
     width: 100%;
     object-fit: fill;
 }
 
-.book a {
+a {
     text-decoration: none;
     color: #000;
     text-align: center;

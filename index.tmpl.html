@@ -18,13 +18,15 @@
     </div>
 
 
-    {{range $idx, $book := . }}
+    {{range . }}
 
     <!-- book -->
-    <a href="{{ $book.Path }}" download="{{ $book.Name }}" alt="">
+    <a href="{{ .Path }}" download="{{ .Name }}" alt="">
       <div class="book">
-        <img src="{{ $book.Path }}.jpg">
-        {{$idx }} - {{ $book.Name }}
+        <div class="image">
+          <img src="{{ .Path }}.jpg">
+        </div>
+        {{ .Name }}
       </div>
 
     </a>
