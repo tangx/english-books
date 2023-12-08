@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Books</title>
+</head>
+
+<body>
+
+  <h1>English Books</h1>
+
+  {{range $idx, $book := . }}
+  <a href="{{ $book.Path }}" download="{{ $book.Name }}">{{ $idx }}.
+    {{ $book.Name }}
+  </a>
+  <hr>
+  {{ end}}
+
+</body>
+
+</html>
