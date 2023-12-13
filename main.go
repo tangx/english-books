@@ -12,8 +12,10 @@ import (
 //go:embed index.tmpl.html
 var tmpl string
 
+var TARGET_FOLDER = "./targets"
+
 func main() {
-	walk("./books")
+	walk(TARGET_FOLDER)
 
 	tmpl, err := template.New("index.html").Parse(tmpl)
 	if err != nil {
